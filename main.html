@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>gexighua</title>
+		<link rel="stylesheet" type="text/css" href="css/aui.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/minirefresh.css" />
+		<link rel="stylesheet" href="css/common.css" />
+
+		<style type="text/css">
+			#demo {
+				width: 60%rem;
+				height: 70%rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="demo">
+
+			<style>
+				.navbar-header {
+					background-color: rgba(247, 247, 247, 0);
+					border-bottom: none;
+				}
+				
+				.minirefresh-wrap {
+					top: 0;
+				}
+				
+				.minirefresh-theme-default .minirefresh-downwrap {
+					top: 45px;
+				}
+			</style>
+			</head>
+
+			<body>
+
+				<nav class="navbar-header mui-bar mui-bar-transparent">
+					<a class="nav-btn-left" href="#"></a>
+					个性化旅游
+				</nav>
+				<div class="content">
+					<div id="minirefresh" class="minirefresh-wrap">
+
+						<div class="minirefresh-scroll">
+
+							<!-- 一个轮播示例，可以是其它的轮播  -->
+							<div id="gallert-slider" class="mui-slider">
+								<div class="mui-slider-group mui-slider-loop">
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="images/120.jpg">
+										</a>
+									</div>
+									<!-- 第一张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="images/122.jpg">
+										</a>
+									</div>
+									<!-- 第二张 -->
+									<div class="mui-slider-item">
+										<a href="#">
+											<img src="images/121.jpg">
+										</a>
+									</div>
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#">
+											<img src="images/123.jpeg">
+										</a>
+									</div>
+								</div>
+								<div class="mui-slider-indicator">
+									<div class="mui-indicator mui-active"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+								</div>
+							</div>
+
+							<ul class="data-list" id="listdata">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript" src="js/mui.min.js"></script>
+				<script type="text/javascript" src="js/minirefresh.js"></script>
+				<script type="text/javascript" src="js/common.js"></script>
+				<style type="text/css">
+					html,
+					body,
+					header,
+					p,
+					main,
+					p,
+					span,
+					ul,
+					li {
+						margin: 0;
+						padding: 0;
+					}
+					
+					#refreshContainer li {
+						background-color: #eee;
+						margin-bottom: 1px;
+						padding: 20px 10px;
+					}
+					
+					.refreshText {
+						position: absolute;
+						width: 100%;
+						line-height: 50px;
+						text-align: center;
+						left: 0;
+						top: 0;
+						transform: translateY(-50px);
+					}
+					.box {
+
+text-align: center;
+
+}
+
+.left {
+
+display: inline-block;
+
+width: 49.5%;
+
+margin-right: 0.5%;
+
+border: 1px solid rgba(127, 127, 127, 0.6);
+
+-webkit-box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+box-sizing: border-box;
+
+}
+
+.right {
+
+display: inline-block;
+
+width: 49.5%;
+
+margin-left: 0.5%;
+
+border: 1px solid rgba(127, 127, 127, 0.6);
+
+-webkit-box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+box-sizing: border-box;
+
+}
+
+				</style>
+
+				<main class="parent">
+
+					<p class="refreshText"></p>
+
+					<ul id="refreshContainer">
+                    
+
+
+						<li>444</li>
+
+						<li>555</li>
+
+						<li>111</li>
+
+						<li>CoCo奶茶                         您曾经给过5星好评 <p>超过百分之八十的顾客给了5星好评</p></li>
+						<li>彭德楷黄焖鸡                         您未给任何评价 <p>将近百分之二十的顾客认为他家比较辣</p></li>
+						<li>鑫磊磊食品店                         您未给任何评价 <p>百分之九十的顾客给了5星好评</p></li>
+						<li>淮南牛肉汤                   您给过相关评价<p>您觉得他家味道还行，但是给了差评收到差评较多，不推荐就餐</p></li>
+						<li>老师傅排骨                         您曾经给过4星好评 <p>超过百分之九十的顾客给了5星好评</p></li>
+						<li>沪上阿姨                         您未做任何评价<p>超过百分之六十的顾客认为沪上阿姨价格偏贵</p></li>
+						<li>三江源牛肉面                         您未做任何评价 <p>大部分顾客认为偏辣</p></li>
+
+
+					</ul>
+
+				</main>
+				<script type="text/javascript">
+					window.onload = function() {
+
+						//1.获取到列表的dom，刷新显示部分的dom，列表父容器的dom
+
+						let container = document.querySelector('#refreshContainer');
+
+						let refreshText = document.querySelector('.refreshText');
+
+						let parent = document.querySelector('.parent');
+
+						//2.定义一些需要常用的变量
+
+						let startY = 0; //手指触摸最开始的Y坐标
+
+						let endY = 0; //手指结束触摸时的Y坐标
+
+						//3.给列表dom监听touchstart事件,得到起始位置的Y坐标
+
+						parent.addEventListener('touchstart', function(e) {
+
+							startY = e.touches[0].pageY;
+
+						});
+
+						//4.给列表dom监听touchmove事件，当移动到一定程度需要显示上面的文字
+
+						parent.addEventListener('touchmove', function(e) {
+
+							if(isTop() && (e.touches[0].pageY - startY) > 0) {
+
+								console.log('下拉了');
+
+								refreshText.style.height = "50px";
+
+								parent.style.transform = "translateY(50px)";
+
+								parent.style.transition = "all ease 0.5s";
+
+								refreshText.innerHTML = "释放立即刷新...";
+
+							}
+
+						});
+
+						//5.给列表dom监听touchend事件，此时说明用户已经松开了手指，应该进行异步操作了
+
+						parent.addEventListener('touchend', function(e) {
+
+							if(isTop()) {
+
+								refreshText.innerHTML = "正在刷新...";
+
+								setTimeout(function() {
+
+									parent.style.transform = "translateY(0)";
+
+									console.log('成功刷新');
+
+								}, 2000)
+
+							}
+
+							return;
+
+						})
+
+						function isTop() {
+
+							var t = document.documentElement.scrollTop || document.body.scrollTop;
+
+							return t === 0 ? true : false;
+
+						}
+
+					}
+				</script>
+			</body>
+
+</html>
+</div>
+<footer class="aui-bar aui-bar-tab" id="footer">
+	<div class="aui-bar-tab-item aui-active" tapmode>
+		<div class="aui-bar-tab-label">首页</div>
+	</div>
+	<div class="aui-bar-tab-item" tapmode>
+
+		<a href="daohang.html">
+			<div class="aui-bar-tab-label">导航</div>
+		</a>
+	</div>
+	<div class="aui-bar-tab-item" tapmode>
+		<div class="aui-badge">99</div>
+		<a href="Echart.html">
+			<div class="aui-bar-tab-label">旅行背包</div>
+		</a>
+	</div>
+	<div class="aui-bar-tab-item" tapmode>
+		<div class="aui-dot"></div>
+
+		<a href="setting.html">
+			<div class="aui-bar-tab-label">设置</div>
+		</a>
+	</div>
+</footer>
+</body>
+<script type="text/javascript" src="js/api.js"></script>
+<script type="text/javascript" src="js/aui-tab.js"></script>
+<script type="text/javascript">
+	apiready = function() {
+		api.parseTapmode();
+	}
+	var tab = new auiTab({
+		element: document.getElementById("footer")
+	}, function(ret) {
+		console.log(ret);
+		if(ret) {
+			document.getElementById("").textContent = ret.index;
+		}
+	});
+</script>
+
+</html>
